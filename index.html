@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The AI Architect's Toolkit | Dolan AI</title>
+    <style>
+        :root {
+            /* Dolan Brand Colors */
+            --primary-color: #A81E2B; /* Deep Red extracted from Logo */
+            --text-color: #333333;
+            --bg-color: #ffffff;
+            --code-bg: #f5f5f5;
+            --accent-bg: #fff5f5;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header & Logo */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .logo {
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: var(--text-color);
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* The Asset / Code Block Styling */
+        .asset-box {
+            background-color: var(--code-bg);
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            border: 1px solid #ddd;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        pre {
+            overflow-x: auto;
+            white-space: pre-wrap;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.95rem;
+            color: #2c3e50;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px 12px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .copy-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Audit Checklist */
+        .audit-box {
+            background-color: var(--accent-bg);
+            border: 1px solid #ffdcd6;
+            border-radius: 8px;
+            padding: 30px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .checkbox {
+            min-width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 4px;
+            margin-right: 15px;
+            margin-top: 4px;
+        }
+
+        /* Roadmap Steps */
+        .step-card {
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .step-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .tag.complete { background: #e6fffa; color: #047857; }
+        .tag.next { background: #ebf8ff; color: #0369a1; }
+        .tag.pro { background: #fff5f5; color: #c53030; }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #8a1622;
+        }
+
+        footer {
+            margin-top: 80px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            padding-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <header>
+        <!-- Replace 'logo.png' with your actual image file name -->
+        <img src="logo.png" alt="Dolan AI Logo" class="logo">
+        <h1>The AI Architect’s Toolkit</h1>
+        <p>The Dolan Protocol: Standardized Intelligent Workflows</p>
+    </header>
+
+    <!-- SECTION 1: THE ASSET -->
+    <section id="the-asset">
+        <h2>1. The Dolan Protocol: Architect Template</h2>
+        <p>You have graduated from "Ad-Hoc Chatting" (Level 1) to "Intelligent Workflows" (Level 3). This code block is your permanent asset. It ensures every analysis you run is safe, structured, and auditable.</p>
+        
+        <h3>How to Use:</h3>
+        <p>1. Copy the code below.<br>2. Paste it into the start of any new ChatGPT session.<br>3. Follow the P.R.E. Protocol (Plan, Review, Execute).</p>
+
+        <div class="asset-box">
+            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+            <pre id="prompt-code"># SYSTEM PROMPT: THE DOLAN ARCHITECT
+# Framework: The Dolan Protocol
+# Version: 2.1 (Intelligent Workflow Edition)
+# Developer: Dolan AI
+
+# IDENTITY
+You are The Dolan Architect. You do not just execute tasks; you engineer professional outcomes using the Dolan Protocol.
+
+# PROTOCOL (P.R.E.)
+
+## 1. PLAN
+When the user provides a task OR raw data:
+1.  Acknowledge receipt ("Data Noted" or "Task Received").
+2.  **IMMEDIATELY** ask 3 clarifying questions (Audience, Goal, Format) to establish the context for analysis.
+3.  Once the user answers, draft a strategy.
+
+## 2. REVIEW (The Board Meeting)
+**NEVER SKIP THIS STEP.**
+Identify 3 relevant stakeholder personas for this specific task.
+Simulate a review where each persona critiques the strategy.
+Present the critiques to the user and ask: "Shall I refine the plan based on this feedback?"
+
+## 3. EXECUTE
+ONLY after the user replies "Approve" or "Proceed," execute the final analysis/generation.
+
+# START
+Introduce yourself as "The Dolan Architect" and ask for the research topic or data.</pre>
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE AUDIT -->
+    <section id="automation-audit">
+        <h2>2. Is Your Business Ready for Automation?</h2>
+        <p>Today, you solved the <strong>Quality</strong> problem. But you are still doing the manual labor (copy-pasting data). If you want to solve the <strong>Labor</strong> problem, you need Level 4: Automated Workflows.</p>
+        
+        <div class="audit-box">
+            <h3>The Automation Checklist</h3>
+            <p><em>If you check 3 or more boxes, you are ready for Level 4.</em></p>
+            
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span>Do you perform this task more than 5 times a week?</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span>Does the data always come from the same source (e.g., Email, CSV)?</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span>Is the decision logic clearly defined?</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span>Is copy-pasting becoming tedious or error-prone?</span>
+            </div>
+            <div class="checklist-item">
+                <div class="checkbox"></div>
+                <span>Is this a high-value task that you hate doing?</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE ROADMAP -->
+    <section id="roadmap">
+        <h2>3. Your Roadmap with Dolan AI</h2>
+        <p>You don't need to figure this out alone. Choose your next step on the maturity curve.</p>
+
+        <!-- Step 1 -->
+        <div class="step-card">
+            <div class="step-header">
+                <h3>Step 1: The Architect (You Are Here)</h3>
+                <span class="tag complete">Complete</span>
+            </div>
+            <p><strong>Skill:</strong> Intelligent Workflow Design<br>
+            <strong>Outcome:</strong> You can build prompts that enforce safety and quality.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+            <div class="step-header">
+                <h3>Step 2: The Automator (Next Workshop)</h3>
+                <span class="tag next">Coming Soon</span>
+            </div>
+            <p><strong>Skill:</strong> Building AI-Powered Automated Workflows.<br>
+            <strong>Goal:</strong> Stop copy-pasting. Learn to connect ChatGPT to Excel, Email, and your Calendar.</p>
+            <a href="mailto:jtao@fairfield.edu?subject=Waitlist%20Request:%20Building%20Automated%20Workflows" class="cta-button">Join the Waitlist via Email</a>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+            <div class="step-header">
+                <h3>Step 3: The Enterprise System (Consulting)</h3>
+                <span class="tag pro">Consulting</span>
+            </div>
+            <p><strong>Skill:</strong> Custom Integration & Governance.<br>
+            <strong>Offer:</strong> Too busy to build it yourself? Let us map your heaviest workflow and tell you exactly how to automate it.</p>
+            <a href="mailto:jtao@fairfield.edu?subject=Audit%20Request:%2015-Minute%20Workflow%20Consultation" class="cta-button">Book Your Workflow Audit</a>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dolan AI. All Rights Reserved.</p>
+    </footer>
+
+</div>
+
+<script>
+    function copyCode() {
+        const codeText = document.getElementById("prompt-code").innerText;
+        navigator.clipboard.writeText(codeText).then(() => {
+            const btn = document.querySelector(".copy-btn");
+            const originalText = btn.innerText;
+            btn.innerText = "Copied!";
+            btn.style.backgroundColor = "#A81E2B";
+            btn.style.color = "white";
+            
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.backgroundColor = "white";
+                btn.style.color = "#333";
+            }, 2000);
+        });
+    }
+</script>
+
+</body>
+</html>
